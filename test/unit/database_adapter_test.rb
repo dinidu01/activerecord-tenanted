@@ -9,6 +9,11 @@ describe ActiveRecord::Tenanted::DatabaseAdapter do
       assert_instance_of ActiveRecord::Tenanted::DatabaseAdapters::SQLite, adapter
     end
 
+    test "selects correct adapter for postgresql" do
+      adapter = ActiveRecord::Tenanted::DatabaseAdapter.new(create_config("postgresql"))
+      assert_instance_of ActiveRecord::Tenanted::DatabaseAdapters::PostgreSQL, adapter
+    end
+
     test "raises error for unsupported adapter" do
       unsupported_config = create_config("mongodb")
 

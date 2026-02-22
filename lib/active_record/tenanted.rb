@@ -5,6 +5,7 @@ require "active_record"
 require "zeitwerk"
 loader = Zeitwerk::Loader.for_gem_extension(ActiveRecord)
 loader.inflector.inflect(
+  "postgresql" => "PostgreSQL",
   "sqlite" => "SQLite",
 )
 loader.setup

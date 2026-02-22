@@ -3,7 +3,7 @@
 Enable a Rails application to host multiple isolated tenants.
 
 > [!NOTE]
-> Only the sqlite3 database adapter is fully supported right now. If you have a use case for tenanting one of the other databases supported by Rails, please reach out to the maintainers!
+> The `sqlite3` and `postgresql` database adapters are supported for tenant databases.
 
 ## Summary
 
